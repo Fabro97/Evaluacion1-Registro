@@ -3,8 +3,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Contract to deploy
-const contractAddress = process.env.GANACHE_REGISTRY_CONTRACT_ADDRESS;
-
+const contractAddress = process.env.RINKEBY_REGISTRY_CONTRACT_ADDRESS;
 async function main() {
     // Get provider and signer
     const [signer] = await ethers.getSigners();
@@ -18,21 +17,21 @@ async function main() {
         throw new Error("-- No contract at address ", contractAddress);
     }
     
+    console.log("---------------------------------------------------------------------------------------");
+    console.log("-- Get Student Score");
+    console.log("---------------------------------------------------------------------------------------");
+
     //------------------------------------------------------------------------
     // ESCRIBA SU CÓDIGO ENTRE LAS LÍNEAS PUNTEADAS. DEBAJO DE CADA COMENTARIO
     //------------------------------------------------------------------------
-    
-    // Llame al método de registro de usuario
 
     // Llame al método para obtener su puntuación y muestrela en la consola
-    const myScore = 0;
+    const myScore = await contractInstance.getScore();
     console.log("");
-    console.log("-- Your score is: ", myScore);
+    console.log("-- Your score is: ", parseInt(myScore));
 
     //------------------------------------------------------------------------
     
-    console.log("---------------------------------------------------------------------------------------");
-    console.log("-- Registration complete");
     console.log("---------------------------------------------------------------------------------------");
 }
 

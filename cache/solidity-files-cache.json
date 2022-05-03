@@ -1,0 +1,40 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "D:\\ort\\Primer semestre 2022\\Taller de tecnologias 2\\primeraTarea\\Evaluacion1-Registro\\contracts\\studentRegistry.sol": {
+      "lastModificationDate": 1651607583354,
+      "contentHash": "9712c027d4ddd468960187ad70936128",
+      "sourceName": "contracts/studentRegistry.sol",
+      "solcConfig": {
+        "version": "0.8.9",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "0.8.9"
+      ],
+      "artifacts": [
+        "StudentRegistry"
+      ]
+    }
+  }
+}
